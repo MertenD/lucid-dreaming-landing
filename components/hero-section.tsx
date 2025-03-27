@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import BookCover from "@/components/book-cover"
 import StarRating from "@/components/star-rating"
 import FeatureList from "@/components/feature-list"
+import Link from "next/link";
 
 export default function HeroSection() {
   return (
@@ -83,13 +84,15 @@ export default function HeroSection() {
                 <p className="text-xl text-[#f5f0d9]/90 lg:text-2xl">Ein praktischer Leitfaden zum luziden Träumen</p>
               </div>
 
-              <Button
-                variant="cta"
-                size="xl"
-                className="relative w-fit overflow-hidden rounded-md px-8 py-5 text-xl font-bold before:absolute before:inset-0 before:-z-10 before:translate-y-full before:bg-gradient-to-r before:from-[#ff8c4d] before:to-[#e67533] before:opacity-0 before:transition-all before:duration-500 hover:before:translate-y-0 hover:before:opacity-100"
-              >
-                JETZT KAUFEN
-              </Button>
+              <Link href="https://www.amazon.de/Kontrolliere-Deine-Tr%C3%A4ume-praktischer-Leidfaden/dp/B0D8LHZ2X6" target="_blank">
+                <Button
+                  variant="cta"
+                  size="xl"
+                  className="relative w-fit overflow-hidden rounded-md px-8 py-5 text-xl font-bold before:absolute before:inset-0 before:-z-10 before:translate-y-full before:bg-gradient-to-r before:from-[#ff8c4d] before:to-[#e67533] before:opacity-0 before:transition-all before:duration-400 hover:before:translate-y-0 hover:before:opacity-100"
+                >
+                  JETZT KAUFEN
+                </Button>
+              </Link>
 
               <div className="space-y-2">
                 <p className="text-lg text-[#f5f0d9]">Von Merten Dieckmann</p>
@@ -102,7 +105,9 @@ export default function HeroSection() {
 
             {/* Right Column - Book Cover */}
             <div className="flex items-center justify-center">
-              <BookCover />
+              <Link href="https://www.amazon.de/Kontrolliere-Deine-Tr%C3%A4ume-praktischer-Leidfaden/dp/B0D8LHZ2X6" target="_blank">
+                <BookCover />
+              </Link>
             </div>
           </div>
         </div>
