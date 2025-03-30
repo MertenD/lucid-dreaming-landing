@@ -1,6 +1,8 @@
 import HeroSection from "@/components/hero-section"
 import TestimonialSection from "@/components/testimonial-section"
 import FaqSection from "@/components/faq-section"
+import AuthorSection from "@/components/author-section";
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
@@ -13,6 +15,10 @@ export default function Home() {
 
       {/* Testimonials Section */}
       <FaqSection />
+
+      <AuthorSection />
+
+      <Footer />
     </main>
   )
 }
