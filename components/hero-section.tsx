@@ -126,7 +126,7 @@ export default function HeroSection() {
             </p>
           </div>
 
-          <div className="text-center md:text-left lg:ml-32">
+          <div className="text-center md:text-left lg:ml-32 mt-6">
             <h1 className="mb-4 text-xl font-bold text-[#ff8c4d] md:text-2xl lg:text-3xl">Kurz und knapp:</h1>
             <FeatureList
               features={[

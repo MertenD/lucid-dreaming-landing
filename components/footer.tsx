@@ -5,7 +5,7 @@ export default function Footer() {
     const currentYear = new Date().getFullYear()
 
     return (
-        <footer className="relative overflow-hidden bg-[#1a1630] py-6 md:py-8">
+        <footer className="relative overflow-hidden bg-[#171624] py-6 md:py-8">
             <div className="container mx-auto px-4">
                 <div className="flex flex-col items-center justify-between space-y-4 text-center md:flex-row md:space-y-0 md:text-left">
                     {/* Copyright */}
