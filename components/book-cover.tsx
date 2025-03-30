@@ -13,13 +13,13 @@ export default function BookCover() {
       const width = window.innerWidth
       if (width < 640) {
         // Mobile
-        setBookSize({ width: 260, height: 347 })
+        setBookSize({ width: 400, height: 347 })
       } else if (width < 1024) {
         // Tablet
-        setBookSize({ width: 350, height: 467 })
+        setBookSize({ width: 500, height: 467 })
       } else {
         // Desktop
-        setBookSize({ width: 420, height: 560 })
+        setBookSize({ width: 600, height: 600 })
       }
     }
 
@@ -37,7 +37,7 @@ export default function BookCover() {
       {/* 3D Book Image */}
       <div className="relative h-auto">
         <Image
-          src="/images/book-3d.png"
+          src="/images/book-kindle-3d-hardcover.png"
           alt="Kontrolliere Deine Träume Buchcover"
           width={bookSize.width}
           height={bookSize.height}
