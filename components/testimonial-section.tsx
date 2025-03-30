@@ -144,9 +144,9 @@ export default function TestimonialSection() {
         </div>
 
         <div className="container relative mx-auto px-4">
-          <h2 className="mb-8 text-center text-3xl font-bold text-[#f5f0d9] md:mb-12 md:text-4xl lg:text-5xl">
+          <h1 className="mb-8 text-center text-3xl font-bold text-[#f5f0d9] md:mb-12 md:text-4xl lg:text-5xl">
             Was die Leser sagen
-          </h2>
+          </h1>
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-4">
             {testimonials.map((testimonial, index) => (
