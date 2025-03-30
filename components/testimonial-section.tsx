@@ -2,6 +2,7 @@ import {Card, CardContent} from "@/components/ui/card";
 import StarRating from "@/components/star-rating";
 import Link from "next/link";
 import {Button} from "@/components/ui/button";
+import Testimonial from "@/components/Testimonial";
 
 interface TestimonialProps {
   name: string
@@ -83,22 +84,6 @@ const testimonials: TestimonialProps[] = [
     text: "Durch dieses Buch habe ich es endlich geschafft luzid zu Träumen. Es ist zwar ein wenig Aufwand das zu schaffen, allerdings wird man durch dieses Buch optimal an die Thematik herangeführt. "
   }
 ]
-
-function Testimonial({ name, rating, title, text, date }: TestimonialProps) {
-  return (
-      <Card className="border-none bg-gradient-to-br from-[#2d1e3a]/80 to-[#3d2035]/80 shadow-lg backdrop-blur-sm">
-        <CardContent className="p-4 md:p-6">
-          <div className="mb-3 flex items-center justify-between md:mb-4">
-            <StarRating rating={rating} />
-            <span className="text-xs text-[#f5f0d9]/70 md:text-sm">{date}</span>
-          </div>
-          <h3 className="mb-2 text-lg font-bold text-[#f5f0d9]">{title}</h3>
-          <p className="mb-3 text-sm text-[#f5f0d9] md:mb-4 md:text-base">{text}</p>
-          <p className="font-medium text-[#ff8c4d]">{name}</p>
-        </CardContent>
-      </Card>
-  )
-}
 
 export default function TestimonialSection() {
   return (
