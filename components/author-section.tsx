@@ -37,17 +37,19 @@ export default function AuthorSection() {
                         <h3 className="text-2xl font-bold text-[#ff8c4d] md:text-3xl">Merten Dieckmann</h3>
 
                         <div className="space-y-4 text-[#f5f0d9]/90">
+
+
+
                             <p>
-                                Seit über 10 Jahren erforscht Merten Dieckmann die faszinierende Welt des luziden Träumens und hat seine
-                                Erkenntnisse und Techniken in diesem praktischen Leitfaden zusammengefasst.
+                                Merten Dieckmann ist Autor und Software-Entwickler und beschäftigt sich seit Jahren intensiv mit luzidem Träumen. In seinem Buch „Kontrolliere Deine Träume“ verbindet er
+                                persönliche Erfahrung mit bewährten Techniken, um einen verständlichen und praxisnahen Einstieg in die Welt der Klarträume zu bieten.
                             </p>
                             <p>
-                                Als ehemaliger Skeptiker, der selbst den Weg vom Traum-Anfänger zum erfahrenen luziden Träumer gegangen
-                                ist, teilt er sein Wissen in verständlicher und zugänglicher Form.
+                                Mit seinem Hintergrund in Informatik und einer Faszination für das Unbewusste vereint er analytisches Denken mit intuitiver Neugier. Wichtig ist ihm dabei vor allem, das Thema so zu erklären,
+                                wie er es sich selbst am Anfang gewünscht hätte: klar, strukturiert und ohne unnötigen Ballast.
                             </p>
                             <p>
-                                Seine Leidenschaft für das Traumerforschen begann nach einem zufälligen luziden Traumerlebnis während
-                                seines Studiums und entwickelte sich zu einer lebenslangen Reise der Selbstentdeckung.
+                                Für ihn ist luzides Träumen kein spiritueller Akt, sondern ein alltagstaugliches Werkzeug, das jeder erlernen kann – einfach, konkret und für jeden zugänglich.
                             </p>
                         </div>
                     </div>
