@@ -48,8 +48,6 @@ export default function RootLayout({
             sizes="512x512"
             href="/android-chrome-512x512.png"
         />
-        <link rel="stylesheet" href="https://unpkg.com/embla-carousel/embla-carousel.css"/>
-
         <meta name="theme-color" content="#f97316"/>
     </head>
     <body>
