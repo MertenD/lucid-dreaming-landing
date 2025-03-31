@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-[100vh] overflow-hidden px-16">
+    <section className="relative min-h-[100vh] overflow-hidden md:px-16">
       {/* Background Image - Mobile optimiert */}
       <div className="absolute inset-0 z-0">
         <div className="relative h-full w-full md:hidden">

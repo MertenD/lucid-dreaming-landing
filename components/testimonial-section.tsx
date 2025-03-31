@@ -153,9 +153,9 @@ export default function TestimonialsSection() {
         </div>
 
         <div className="container relative mx-auto px-4">
-          <h2 className="mb-8 text-center text-3xl font-bold text-[#f5f0d9] md:mb-12 md:text-4xl lg:text-5xl">
-            Was unsere Leser sagen
-          </h2>
+          <h1 className="mb-8 text-center text-3xl font-bold text-[#f5f0d9] md:mb-12 md:text-4xl lg:text-5xl">
+            Was Leser sagen
+          </h1>
 
           <div className="relative mx-auto max-w-6xl">
             {/* Karussell-Container */}

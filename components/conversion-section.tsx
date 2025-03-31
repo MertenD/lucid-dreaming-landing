@@ -16,9 +16,9 @@ export default function ConversionSection() {
 
             <div className="container relative mx-auto px-4">
                 <div className="mx-auto max-w-3xl rounded-xl bg-gradient-to-br from-[#3d2035]/80 to-[#2a1a2d]/80 p-5 text-center shadow-lg backdrop-blur-sm md:p-10">
-                    <h2 className="mb-4 text-2xl font-bold text-[#f5f0d9] md:mb-6 md:text-4xl">
+                    <h1 className="mb-4 text-xl font-bold text-[#f5f0d9] md:mb-6 md:text-4xl">
                         Bereit, deine Träume zu kontrollieren?
-                    </h2>
+                    </h1>
 
                     <p className="mb-6 text-base text-[#f5f0d9]/90 md:mb-8 md:text-xl">
                         Tauche ein in die faszinierende Welt des luziden Träumens.
