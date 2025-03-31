@@ -83,7 +83,7 @@ const testimonials: TestimonialProps[] = [
     name: "Ole von Selle",
     date: "23. Juli 2024",
     rating: 5,
-    title: "Sternen Mein erster luzider Traum :)",
+    title: "Mein erster luzider Traum :)",
     text: "Durch dieses Buch habe ich es endlich geschafft luzid zu Träumen. Es ist zwar ein wenig Aufwand das zu schaffen, allerdings wird man durch dieses Buch optimal an die Thematik herangeführt. "
   }
 ]
