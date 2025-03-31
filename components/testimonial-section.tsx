@@ -1,8 +1,11 @@
-import {Card, CardContent} from "@/components/ui/card";
-import StarRating from "@/components/star-rating";
-import Link from "next/link";
-import {Button} from "@/components/ui/button";
+"use client"
+
 import Testimonial from "@/components/Testimonial";
+import {useCallback, useEffect, useState} from "react";
+import useEmblaCarousel from "embla-carousel-react";
+import {ChevronLeft, ChevronRight} from "lucide-react";
+import {Button} from "@/components/ui/button";
+import Link from "next/link";
 
 interface TestimonialProps {
   name: string
@@ -85,65 +88,123 @@ const testimonials: TestimonialProps[] = [
   }
 ]
 
-export default function TestimonialSection() {
+export default function TestimonialsSection() {
+  // Embla Carousel Hook ohne Autoplay
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    loop: true,
+    align: "start",
+    skipSnaps: false,
+  })
+
+  // State für aktiven Slide
+  const [selectedIndex, setSelectedIndex] = useState(0)
+
+  // Scroll zu einem bestimmten Slide
+  const scrollTo = useCallback(
+      (index: number) => {
+        if (!emblaApi) return
+        emblaApi.scrollTo(index)
+      },
+      [emblaApi],
+  )
+
+  // Scroll zum vorherigen Slide
+  const scrollPrev = useCallback(() => {
+    if (!emblaApi) return
+    emblaApi.scrollPrev()
+  }, [emblaApi])
+
+  // Scroll zum nächsten Slide
+  const scrollNext = useCallback(() => {
+    if (!emblaApi) return
+    emblaApi.scrollNext()
+  }, [emblaApi])
+
+  // Aktualisiere den ausgewählten Index, wenn sich der Slide ändert
+  useEffect(() => {
+    if (!emblaApi) return
+
+    const onSelect = () => {
+      setSelectedIndex(emblaApi.selectedScrollSnap())
+    }
+
+    emblaApi.on("select", onSelect)
+    onSelect()
+
+    return () => {
+      emblaApi.off("select", onSelect)
+    }
+  }, [emblaApi])
+
   return (
-      <section
-          className="relative overflow-hidden bg-gradient-to-b from-[#182037] to-[#2d1e3a] py-12 md:py-16 lg:py-24">
-        {/* Animierte Sterne im Hintergrund */}
-        <div className="absolute inset-0">
-          {/* Erste Gruppe von Sternen */}
-          <div
-              className="absolute left-[10%] top-[20%] h-1 w-1 rounded-full bg-white shadow-[0_0_10px_2px_rgba(255,255,255,0.8)] animate-twinkle"></div>
-          <div
-              className="absolute left-[25%] top-[50%] h-1.5 w-1.5 rounded-full bg-white shadow-[0_0_12px_3px_rgba(255,255,255,0.8)] animate-twinkle-delay"></div>
-          <div
-              className="absolute left-[80%] top-[15%] h-1 w-1 rounded-full bg-white shadow-[0_0_10px_2px_rgba(255,255,255,0.8)] animate-twinkle"></div>
-          <div
-              className="absolute left-[60%] top-[70%] h-1 w-1 rounded-full bg-white shadow-[0_0_10px_2px_rgba(255,255,255,0.8)] animate-twinkle-delay"></div>
-          <div
-              className="absolute left-[40%] top-[85%] h-1.5 w-1.5 rounded-full bg-white shadow-[0_0_12px_3px_rgba(255,255,255,0.8)] animate-twinkle"></div>
+      <section className="relative overflow-hidden bg-gradient-to-b from-[#182037] to-[#2d1e3a] py-12 md:py-16 lg:py-24">
+        {/* Subtile Planeteneffekte */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -right-20 top-[10%] h-40 w-40 rounded-full bg-gradient-to-br from-[#e67533] to-[#d56a2d] opacity-10"></div>
+          <div className="absolute -left-10 bottom-[20%] h-24 w-24 rounded-full bg-gradient-to-br from-[#e67533] to-[#d56a2d] opacity-10"></div>
 
-          {/* Zweite Gruppe von Sternen mit anderen Verzögerungen */}
-          <div
-              className="absolute left-[15%] top-[35%] h-1 w-1 rounded-full bg-white shadow-[0_0_10px_2px_rgba(255,255,255,0.8)] animate-twinkle-delay"></div>
-          <div
-              className="absolute left-[75%] top-[25%] h-1 w-1 rounded-full bg-white shadow-[0_0_10px_2px_rgba(255,255,255,0.8)] animate-twinkle"></div>
-          <div
-              className="absolute left-[50%] top-[10%] h-2 w-2 rounded-full bg-white shadow-[0_0_15px_4px_rgba(255,255,255,0.8)] animate-twinkle-delay"></div>
-          <div
-              className="absolute left-[30%] top-[65%] h-1 w-1 rounded-full bg-white shadow-[0_0_10px_2px_rgba(255,255,255,0.8)] animate-twinkle"></div>
-          <div
-              className="absolute left-[85%] top-[80%] h-1 w-1 rounded-full bg-white shadow-[0_0_10px_2px_rgba(255,255,255,0.8)] animate-twinkle-delay"></div>
-
-          {/* Dritte Gruppe - kleinere Sterne */}
-          <div
-              className="absolute left-[5%] top-[45%] h-0.5 w-0.5 rounded-full bg-white shadow-[0_0_5px_1px_rgba(255,255,255,0.8)] animate-twinkle"></div>
-          <div
-              className="absolute left-[55%] top-[30%] h-0.5 w-0.5 rounded-full bg-white shadow-[0_0_5px_1px_rgba(255,255,255,0.8)] animate-twinkle-delay"></div>
-          <div
-              className="absolute left-[90%] top-[40%] h-0.5 w-0.5 rounded-full bg-white shadow-[0_0_5px_1px_rgba(255,255,255,0.8)] animate-twinkle"></div>
-          <div
-              className="absolute left-[20%] top-[75%] h-0.5 w-0.5 rounded-full bg-white shadow-[0_0_5px_1px_rgba(255,255,255,0.8)] animate-twinkle-delay"></div>
-          <div
-              className="absolute left-[70%] top-[60%] h-0.5 w-0.5 rounded-full bg-white shadow-[0_0_5px_1px_rgba(255,255,255,0.8)] animate-twinkle"></div>
+          {/* Animierte Sterne */}
+          <div className="absolute left-[8%] top-[12%] h-1 w-1 rounded-full bg-white shadow-[0_0_10px_2px_rgba(255,255,255,0.8)] opacity-20 animate-twinkle"></div>
+          <div className="absolute left-[22%] top-[45%] h-1.5 w-1.5 rounded-full bg-white shadow-[0_0_12px_3px_rgba(255,255,255,0.8)] opacity-20 animate-twinkle-delay"></div>
+          <div className="absolute left-[88%] top-[22%] h-1 w-1 rounded-full bg-white shadow-[0_0_10px_2px_rgba(255,255,255,0.8)] opacity-20 animate-twinkle"></div>
+          <div className="absolute left-[65%] top-[8%] h-1 w-1 rounded-full bg-white shadow-[0_0_10px_2px_rgba(255,255,255,0.8)] opacity-20 animate-twinkle-delay"></div>
+          <div className="absolute left-[35%] top-[75%] h-1.5 w-1.5 rounded-full bg-white shadow-[0_0_12px_3px_rgba(255,255,255,0.8)] opacity-20 animate-twinkle"></div>
+          <div className="absolute left-[78%] top-[65%] h-1 w-1 rounded-full bg-white shadow-[0_0_10px_2px_rgba(255,255,255,0.8)] opacity-20 animate-twinkle-delay"></div>
         </div>
 
         <div className="container relative mx-auto px-4">
-          <h1 className="mb-8 text-center text-3xl font-bold text-[#f5f0d9] md:mb-12 md:text-4xl lg:text-5xl">
-            Was die Leser sagen
-          </h1>
+          <h2 className="mb-8 text-center text-3xl font-bold text-[#f5f0d9] md:mb-12 md:text-4xl lg:text-5xl">
+            Was unsere Leser sagen
+          </h2>
 
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-4">
-            {testimonials.map((testimonial, index) => (
-                <Testimonial key={index} {...testimonial} />
-            ))}
+          <div className="relative mx-auto max-w-6xl">
+            {/* Karussell-Container */}
+            <div className="overflow-hidden" ref={emblaRef}>
+              <div className="w-full flex">
+                {testimonials.map((testimonial, index) => (
+                    <Testimonial key={index} {...testimonial} />
+                ))}
+              </div>
+            </div>
+
+            {/* Navigationspfeile */}
+            <button
+                onClick={scrollPrev}
+                className="absolute left-0 top-1/2 z-10 -translate-y-1/2 rounded-full bg-[#2a1a2d]/80 p-2 text-[#f5f0d9] opacity-70 transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-[#e67533] md:left-4"
+                aria-label="Vorheriges Testimonial"
+            >
+              <ChevronLeft className="h-6 w-6"/>
+            </button>
+
+            <button
+                onClick={scrollNext}
+                className="absolute right-0 top-1/2 z-10 -translate-y-1/2 rounded-full bg-[#2a1a2d]/80 p-2 text-[#f5f0d9] opacity-70 transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-[#e67533] md:right-4"
+                aria-label="Nächstes Testimonial"
+            >
+              <ChevronRight className="h-6 w-6"/>
+            </button>
+
+            {/* Indikator-Punkte */}
+            <div className="mt-6 flex justify-center gap-2">
+              {testimonials.map((_, index) => (
+                  <button
+                      key={index}
+                      className={`h-2.5 w-2.5 rounded-full transition-all ${
+                          index === selectedIndex ? "bg-[#e67533] w-5" : "bg-[#f5f0d9]/30 hover:bg-[#f5f0d9]/50"
+                      }`}
+                      onClick={() => scrollTo(index)}
+                      aria-label={`Gehe zu Testimonial ${index + 1}`}
+                  />
+              ))}
+            </div>
           </div>
 
           <div className="mt-8 text-center md:mt-12">
             <p className="mb-6 text-lg text-[#f5f0d9] md:text-xl">
               Schließe dich über <span className="font-bold text-[#ff8c4d]">180+ zufriedenen Lesern</span> an!
             </p>
-            <Link href="https://www.amazon.de/Kontrolliere-Deine-Tr%C3%A4ume-praktischer-Leidfaden/dp/B0D8LHZ2X6" target="_blank">
+            <Link href="https://www.amazon.de/Kontrolliere-Deine-Tr%C3%A4ume-praktischer-Leidfaden/dp/B0D8LHZ2X6"
+                  target="_blank">
               <Button
                   variant="cta"
                   size="xl"
@@ -153,9 +214,8 @@ export default function TestimonialSection() {
               </Button>
             </Link>
           </div>
-
         </div>
       </section>
-)
+  )
 }
 

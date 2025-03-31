@@ -22,8 +22,8 @@ export default function Testimonial({ name, rating, title, text, date }: Testimo
     const truncatedText = isTruncated && !isExpanded ? `${text.substring(0, maxLength)}...` : text
 
     return (
-        <Card className="border-none bg-gradient-to-br from-[#2d1e3a]/80 to-[#3d2035]/80 shadow-lg backdrop-blur-sm">
-            <CardContent className="p-4 md:p-6 flex flex-col h-full justify-between">
+        <Card className="border-none bg-gradient-to-br from-[#2d1e3a]/80 to-[#3d2035]/80 shadow-lg backdrop-blur-sm mr-4">
+            <CardContent className="w-80 p-4 md:p-6 flex flex-col h-full justify-between">
                 <div>
                     <div className="mb-3 flex items-center justify-between md:mb-4">
                         <StarRating rating={rating} />
