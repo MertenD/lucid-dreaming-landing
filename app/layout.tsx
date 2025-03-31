@@ -1,6 +1,7 @@
 import type React from "react"
 import "./globals.css"
 import {ThemeProvider} from "@/components/theme-provider"
+import { PostHogProvider } from "@/app/providers";
 
 export const metadata = {
     title: "Kontrolliere Deine Träume - Luzides Träumen",
@@ -9,8 +10,8 @@ export const metadata = {
 }
 
 export default function RootLayout({
-                                       children,
-                                   }: {
+   children,
+}: {
     children: React.ReactNode
 }) {
     return <html lang="de">
@@ -52,10 +53,12 @@ export default function RootLayout({
         <meta name="theme-color" content="#f97316"/>
     </head>
     <body>
-    <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
-                {children}
+        <PostHogProvider>
+            <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
+                    {children}
             </ThemeProvider>
-        </body>
+        </PostHogProvider>
+    </body>
     </html>
 }
 
