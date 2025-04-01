@@ -54,7 +54,6 @@ export default function RootLayout({
             href="/favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest"/>
-        {/* Android-Chrome-Icons, falls du sie explizit einbinden willst */}
         <link
             rel="icon"
             type="image/png"
@@ -78,7 +77,3 @@ export default function RootLayout({
     </body>
     </html>
 }
-
-
-import './globals.css'
-import Head from "next/head";
