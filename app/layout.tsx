@@ -36,6 +36,7 @@ export default function RootLayout({
     return <html lang="de">
     <head>
         <link rel="icon" href="/favicon.ico"/>
+        <meta name="google-site-verification" content="yiwzK3TXkXKNv2YiiJ9IgPk3Io-SjndwRNV-7uIQmao"/>
         <link
             rel="apple-touch-icon"
             sizes="180x180"
@@ -69,8 +70,8 @@ export default function RootLayout({
         <meta name="theme-color" content="#f97316"/>
     </head>
     <body>
-        <PostHogProvider>
-            <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
+    <PostHogProvider>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
                     {children}
             </ThemeProvider>
         </PostHogProvider>
