@@ -4,9 +4,28 @@ import {ThemeProvider} from "@/components/theme-provider"
 import { PostHogProvider } from "@/app/providers";
 
 export const metadata = {
-    title: "Kontrolliere Deine Träume - Luzides Träumen",
-    description: "Ein praktischer Leitfaden zum luziden Träumen von Merten Dieckmann",
-    generator: 'v0.dev'
+    title: "Luzides Träumen lernen: 'Kontrolliere Deine Träume' – Der Ratgeber von Merten Dieckmann",
+    description:
+        "Entdecke praxisnahe Techniken, um deine Träume bewusst zu steuern und unvergessliche Abenteuer zu erleben. Lerne mit 'Kontrolliere Deine Träume' den ultimativen Leitfaden für luzides Träumen – ideal für Einsteiger und Fortgeschrittene.",
+    metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL),
+    keywords: [
+        "luzides träumen",
+        "luzides träumen buch",
+        "luzides träumen lernen",
+        "klartraum",
+        "klarträumen lernen",
+        "klartraum buch",
+        "traumratgeber",
+        "traumkontrolle",
+        "kontrolliere deine träume",
+        "träume kontrollieren",
+        "merten dieckmann"
+    ],
+    openGraph: {
+        title: "Luzides Träumen lernen: 'Kontrolliere Deine Träume'",
+        description:
+            "Erfahre effektive Techniken und Tipps, um deine Träume bewusst zu steuern. Entdecke jetzt den ultimativen Ratgeber von Merten Dieckmann!"
+    }
 }
 
 export default function RootLayout({
