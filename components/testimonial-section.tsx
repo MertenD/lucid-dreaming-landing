@@ -201,7 +201,7 @@ export default function TestimonialsSection() {
 
           <div className="mt-8 text-center md:mt-12">
             <p className="mb-6 text-lg text-[#f5f0d9] md:text-xl">
-              Schließe dich über <span className="font-bold text-[#ff8c4d]">180+ zufriedenen Lesern</span> an!
+              Schließe dich <span className="font-bold text-[#ff8c4d]">hunderten zufriedenen Lesern</span> an!
             </p>
             <Link href="https://www.amazon.de/Kontrolliere-Deine-Tr%C3%A4ume-praktischer-Leidfaden/dp/B0D8LHZ2X6"
                   target="_blank">

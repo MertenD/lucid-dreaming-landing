@@ -1,0 +1,26 @@
+services:
+  lucid-dream-landing:
+    container_name: lucid-dream-landing
+    build:
+      context: .
+      args:
+        - NEXT_PUBLIC_POSTHOG_KEY=${NEXT_PUBLIC_POSTHOG_KEY}
+        - NEXT_PUBLIC_POSTHOG_HOST=${NEXT_PUBLIC_POSTHOG_HOST}
+        - NEXT_PUBLIC_APP_URL=${NEXT_PUBLIC_APP_URL}
+    image: mertend/lucid-dream-landing:latest
+    networks:
+      - web
+    restart: unless-stopped
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.lucid-dream.rule=Host(`luzides-traeumen-buch.de`)
+      - traefik.http.routers.lucid-dream.entrypoints=websecure
+      - traefik.http.routers.lucid-dream.tls=true
+      - traefik.http.routers.lucid-dream.tls.certresolver=le-merten
+      - traefik.docker.network=web
+      - traefik.http.services.lucid-dream.loadbalancer.server.port=3000
+      - com.centurylinklabs.watchtower.enable=true
+
+networks:
+  web:
+    external: true
