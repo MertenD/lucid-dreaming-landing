@@ -7,7 +7,7 @@ export const metadata = {
     title: "Luzides Träumen lernen: 'Kontrolliere Deine Träume' – Der Ratgeber von Merten Dieckmann",
     description:
         "Entdecke praxisnahe Techniken, um deine Träume bewusst zu steuern und unvergessliche Abenteuer zu erleben. Lerne mit 'Kontrolliere Deine Träume' den ultimativen Leitfaden für luzides Träumen – ideal für Einsteiger und Fortgeschrittene.",
-    metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL),
+    metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || ""),
     keywords: [
         "luzides träumen",
         "luzides träumen buch",
