@@ -13,7 +13,7 @@ services:
     restart: unless-stopped
     labels:
       - traefik.enable=true
-      - traefik.http.routers.lucid-dream.rule=Host(`luzides-traeumen-buch.de`)
+      - traefik.http.routers.lucid-dream.rule=Host(`luzides-traeumen-buch.de`) || Host(`www.luzides-traeumen-buch.de`)
       - traefik.http.routers.lucid-dream.entrypoints=websecure
       - traefik.http.routers.lucid-dream.tls=true
       - traefik.http.routers.lucid-dream.tls.certresolver=le-merten
