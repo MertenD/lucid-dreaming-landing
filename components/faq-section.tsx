@@ -62,9 +62,9 @@ export default function FaqSection() {
       </div>
 
       <div className="container relative mx-auto px-4">
-        <h1 className="mb-8 text-center text-3xl font-bold text-[#f5f0d9] md:mb-12 md:text-4xl lg:text-5xl">
+        <h2 className="mb-8 text-center text-3xl font-bold text-[#f5f0d9] md:mb-12 md:text-4xl lg:text-5xl">
           Häufig gestellte Fragen
-        </h1>
+        </h2>
 
         <div className="mx-auto max-w-3xl">
           <Accordion type="single" collapsible className="w-full">

@@ -15,8 +15,12 @@ export default function Footer() {
 
                     {/* Kontakt - nur Email */}
                     <div className="text-sm text-[#f5f0d9]/70">
-                        <a href="mailto:merten.dieckmann@web.de" className="text-[#ff8c4d] hover:underline flex flex-row gap-2">
-                            <Mail></Mail>merten.dieckmann@web.de
+                        <a
+                            href="mailto:merten.dieckmann@web.de"
+                            className="text-[#ff8c4d] hover:underline flex flex-row gap-2"
+                            aria-label="E-Mail an Merten Dieckmann senden"
+                        >
+                            <Mail aria-hidden="true" />merten.dieckmann@web.de
                         </a>
                     </div>
 

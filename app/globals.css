@@ -39,16 +39,19 @@
 @font-face {
   font-family: "Meethlake Three";
   src: url("/fonts/meethlake-three.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
     font-family: "Meethlake Two";
     src: url("/fonts/Meethlaketwo.otf") format("opentype");
+    font-display: swap;
 }
 
 @font-face {
   font-family: "Adorn Roman";
   src: url("/fonts/adorn-roman.ttf") format("truetype");
+  font-display: swap;
 }
 
 body {
@@ -137,6 +140,12 @@ h2 {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #d56a2d;
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #e67533 #1e1a38;
 }
 
 /* Animierte Sterne */

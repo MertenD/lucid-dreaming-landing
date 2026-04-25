@@ -1,4 +1,10 @@
+import type { Metadata } from "next"
 import Link from "next/link"
+
+export const metadata: Metadata = {
+    title: "Impressum – Kontrolliere Deine Träume",
+    robots: { index: false, follow: false },
+}
 
 export default function ImpressumPage() {
     return (

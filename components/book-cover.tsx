@@ -1,60 +1,44 @@
 "use client"
 
 import Image from "next/image"
-import { useEffect, useState } from "react"
+import { useState, useEffect, useRef } from "react"
 
 export default function BookCover() {
-  // Responsive Größe basierend auf Bildschirmbreite
-  const [bookSize, setBookSize] = useState({ width: 300, height: 400 })
+    const [hqLoaded, setHqLoaded] = useState(false)
+    const hqRef = useRef<HTMLImageElement>(null)
 
-  useEffect(() => {
-    // Funktion zur Anpassung der Buchgröße
-    const updateBookSize = () => {
-      const width = window.innerWidth
-      if (width < 640) {
-        // Mobile
-        setBookSize({ width: 400, height: 347 })
-      } else if (width < 1024) {
-        // Tablet
-        setBookSize({ width: 500, height: 467 })
-      } else {
-        // Desktop
-        setBookSize({ width: 600, height: 600 })
-      }
-    }
+    useEffect(() => {
+        if (hqRef.current?.complete) setHqLoaded(true)
+    }, [])
 
-    // Initial und bei Größenänderung aufrufen
-    updateBookSize()
-    window.addEventListener("resize", updateBookSize)
-
-    return () => {
-      window.removeEventListener("resize", updateBookSize)
-    }
-  }, [])
-
-  return (
-    <div className="relative transform-gpu transition-transform duration-500 hover:scale-105">
-      {/* 3D Book Image */}
-      <div className="relative h-auto">
-        <Image
-          src="/images/book-kindle-3d-hardcover.png"
-          alt="Kontrolliere Deine Träume Buchcover"
-          width={bookSize.width}
-          height={bookSize.height}
-          className="object-contain"
-          priority
-        />
-      </div>
-
-      {/* Reflection effect - responsive */}
-      <div
-        className="absolute bottom-[-15px] left-[50%] translate-x-[-50%] rounded-[50%] bg-black/20 blur-xl"
-        style={{
-          width: `${bookSize.width * 0.7}px`,
-          height: `${bookSize.width * 0.05}px`,
-        }}
-      ></div>
-    </div>
-  )
+    return (
+        <div className="relative w-[250px] sm:w-[350px] lg:w-[500px] transform-gpu transition-transform duration-500 hover:scale-105">
+            <div className="relative">
+                {/* LQ WebP – priority, lädt sofort (~91 KB) */}
+                <Image
+                    src="/images/book-kindle-3d-softcover.webp"
+                    alt="Kontrolliere Deine Träume Buchcover"
+                    width={500}
+                    height={430}
+                    sizes="(max-width: 640px) 250px, (max-width: 1024px) 350px, 500px"
+                    className="w-full h-auto object-contain"
+                    priority
+                />
+                {/* HQ PNG – natives <img> mit loading="eager" */}
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                    ref={hqRef}
+                    src="/images/book-kindle-3d-softcover.png"
+                    alt=""
+                    aria-hidden="true"
+                    loading="eager"
+                    className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-700 ${
+                        hqLoaded ? "opacity-100" : "opacity-0"
+                    }`}
+                    onLoad={() => setHqLoaded(true)}
+                />
+            </div>
+            <div className="absolute bottom-[-15px] left-1/2 -translate-x-1/2 w-[70%] h-3 rounded-[50%] bg-black/20 blur-xl" />
+        </div>
+    )
 }
-

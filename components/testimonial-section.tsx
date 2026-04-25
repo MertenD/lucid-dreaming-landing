@@ -4,8 +4,7 @@ import Testimonial from "@/components/Testimonial";
 import {useCallback, useEffect, useState} from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import {ChevronLeft, ChevronRight} from "lucide-react";
-import {Button} from "@/components/ui/button";
-import Link from "next/link";
+import BuyButton from "@/components/buy-button";
 
 interface TestimonialProps {
   name: string
@@ -153,9 +152,9 @@ export default function TestimonialsSection() {
         </div>
 
         <div className="container relative mx-auto px-4">
-          <h1 className="mb-8 text-center text-3xl font-bold text-[#f5f0d9] md:mb-12 md:text-4xl lg:text-5xl">
+          <h2 className="mb-8 text-center text-3xl font-bold text-[#f5f0d9] md:mb-12 md:text-4xl lg:text-5xl">
             Was Leser sagen
-          </h1>
+          </h2>
 
           <div className="relative mx-auto max-w-6xl">
             {/* Karussell-Container */}
@@ -203,16 +202,7 @@ export default function TestimonialsSection() {
             <p className="mb-6 text-lg text-[#f5f0d9] md:text-xl">
               Schließe dich <span className="font-bold text-[#ff8c4d]">hunderten zufriedenen Lesern</span> an!
             </p>
-            <Link href="https://www.amazon.de/Kontrolliere-Deine-Tr%C3%A4ume-praktischer-Leidfaden/dp/B0D8LHZ2X6"
-                  target="_blank">
-              <Button
-                  variant="cta"
-                  size="xl"
-                  className="relative w-fit overflow-hidden rounded-md px-8 py-5 text-xl font-bold before:absolute before:inset-0 before:-z-10 before:translate-y-full before:bg-gradient-to-r before:from-[#ff8c4d] before:to-[#e67533] before:opacity-0 before:transition-all before:duration-400 hover:before:translate-y-0 hover:before:opacity-100"
-              >
-                JETZT KAUFEN
-              </Button>
-            </Link>
+            <BuyButton source="testimonial_section" size="xl" className="px-8 py-5 text-xl" />
           </div>
         </div>
       </section>

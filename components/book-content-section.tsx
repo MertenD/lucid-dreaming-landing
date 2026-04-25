@@ -25,9 +25,9 @@ export default function BookContentSection() {
 
             <div className="container relative mx-auto px-4">
                 <div className="mx-auto max-w-4xl">
-                    <h1 className="mb-10 text-center text-3xl font-bold text-[#f5f0d9] md:text-4xl lg:text-5xl">
+                    <h2 className="mb-10 text-center text-3xl font-bold text-[#f5f0d9] md:text-4xl lg:text-5xl">
                         Worum geht es in diesem Buch?
-                    </h1>
+                    </h2>
 
                     <div className="rounded-xl p-6 md:p-8">
                         <p className="mb-6 text-lg leading-relaxed text-[#f5f0d9] md:text-xl">
@@ -44,7 +44,7 @@ export default function BookContentSection() {
 
                         <div className="grid gap-6 md:grid-cols-2 md:gap-8">
                             <div className="space-y-4">
-                                <h1 className="text-xl font-bold text-[#ff8c4d] md:text-2xl">Was du lernen wirst:</h1>
+                                <h3 className="text-xl font-bold text-[#ff8c4d] md:text-2xl">Was du lernen wirst:</h3>
                                 <ul className="space-y-3">
                                     <li className="flex items-start gap-3">
                                         <div className="mt-1.5 flex h-4 w-4 flex-shrink-0 items-center justify-center rounded-full bg-[#ff8c4d] text-white">
@@ -58,6 +58,7 @@ export default function BookContentSection() {
                                                 strokeWidth="3"
                                                 strokeLinecap="round"
                                                 strokeLinejoin="round"
+                                                aria-hidden="true"
                                             >
                                                 <polyline points="20 6 9 17 4 12"></polyline>
                                             </svg>
@@ -76,6 +77,7 @@ export default function BookContentSection() {
                                                 strokeWidth="3"
                                                 strokeLinecap="round"
                                                 strokeLinejoin="round"
+                                                aria-hidden="true"
                                             >
                                                 <polyline points="20 6 9 17 4 12"></polyline>
                                             </svg>
@@ -94,6 +96,7 @@ export default function BookContentSection() {
                                                 strokeWidth="3"
                                                 strokeLinecap="round"
                                                 strokeLinejoin="round"
+                                                aria-hidden="true"
                                             >
                                                 <polyline points="20 6 9 17 4 12"></polyline>
                                             </svg>
@@ -112,6 +115,7 @@ export default function BookContentSection() {
                                                 strokeWidth="3"
                                                 strokeLinecap="round"
                                                 strokeLinejoin="round"
+                                                aria-hidden="true"
                                             >
                                                 <polyline points="20 6 9 17 4 12"></polyline>
                                             </svg>
@@ -122,7 +126,7 @@ export default function BookContentSection() {
                             </div>
 
                             <div className="space-y-4">
-                                <h1 className="text-xl font-bold text-[#ff8c4d] md:text-2xl">Was du erleben kannst:</h1>
+                                <h3 className="text-xl font-bold text-[#ff8c4d] md:text-2xl">Was du erleben kannst:</h3>
                                 <ul className="space-y-3">
                                     <li className="flex items-start gap-3">
                                         <div className="mt-1.5 flex h-4 w-4 flex-shrink-0 items-center justify-center rounded-full bg-[#ff8c4d] text-white">
@@ -136,6 +140,7 @@ export default function BookContentSection() {
                                                 strokeWidth="3"
                                                 strokeLinecap="round"
                                                 strokeLinejoin="round"
+                                                aria-hidden="true"
                                             >
                                                 <polyline points="20 6 9 17 4 12"></polyline>
                                             </svg>
@@ -154,6 +159,7 @@ export default function BookContentSection() {
                                                 strokeWidth="3"
                                                 strokeLinecap="round"
                                                 strokeLinejoin="round"
+                                                aria-hidden="true"
                                             >
                                                 <polyline points="20 6 9 17 4 12"></polyline>
                                             </svg>
@@ -172,6 +178,7 @@ export default function BookContentSection() {
                                                 strokeWidth="3"
                                                 strokeLinecap="round"
                                                 strokeLinejoin="round"
+                                                aria-hidden="true"
                                             >
                                                 <polyline points="20 6 9 17 4 12"></polyline>
                                             </svg>
@@ -190,6 +197,7 @@ export default function BookContentSection() {
                                                 strokeWidth="3"
                                                 strokeLinecap="round"
                                                 strokeLinejoin="round"
+                                                aria-hidden="true"
                                             >
                                                 <polyline points="20 6 9 17 4 12"></polyline>
                                             </svg>

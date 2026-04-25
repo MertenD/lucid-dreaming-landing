@@ -16,17 +16,19 @@ export default function AuthorSection() {
             </div>
 
             <div className="container relative mx-auto px-4">
-                <h1 className="mb-12 text-center text-3xl font-bold text-[#f5f0d9] md:text-4xl lg:text-5xl">Über den Autor</h1>
+                <h2 className="mb-12 text-center text-3xl font-bold text-[#f5f0d9] md:text-4xl lg:text-5xl">Über den Autor</h2>
 
                 <div className="mx-auto grid max-w-5xl grid-cols-1 items-center gap-8 md:grid-cols-2 md:gap-12 lg:gap-16">
                     {/* Autor-Bild mit Animation */}
                     <div className="flex justify-center md:order-2">
                         <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#e67533]/20 to-[#ff8c4d]/20 p-1 shadow-lg transition-transform duration-500 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(230,117,51,0.3)]">
                             <Image
-                                src="/images/avatar-holding-book.png"
+                                src="/images/avatar-holding-book.webp"
                                 alt="Merten Dieckmann - Autor von 'Kontrolliere Deine Träume'"
                                 width={400}
                                 height={400}
+                                sizes="(max-width: 768px) 90vw, 400px"
+                                loading="lazy"
                                 className="rounded-xl"
                             />
                         </div>
