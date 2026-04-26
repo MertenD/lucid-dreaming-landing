@@ -1,6 +1,6 @@
 export default function BookContentSection() {
     return (
-        <section className="relative overflow-hidden bg-gradient-to-b from-[#182037] to-[#182037] py-16 md:py-24">
+        <section id="buchinhalt" className="relative overflow-hidden bg-gradient-to-b from-[#182037] to-[#182037] py-16 md:py-24">
             {/* Hintergrundeffekte */}
             <div className="absolute inset-0">
                 <div
@@ -63,7 +63,7 @@ export default function BookContentSection() {
                                                 <polyline points="20 6 9 17 4 12"></polyline>
                                             </svg>
                                         </div>
-                                        <span className="text-[#f5f0d9]/90">Techniken zum Erkennen von Träumen</span>
+                                        <span className="text-[#f5f0d9]/90">WILD-, MILD- und WBTB-Techniken Schritt für Schritt</span>
                                     </li>
                                     <li className="flex items-start gap-3">
                                         <div className="mt-1.5 flex h-4 w-4 flex-shrink-0 items-center justify-center rounded-full bg-[#ff8c4d] text-white">
@@ -82,7 +82,7 @@ export default function BookContentSection() {
                                                 <polyline points="20 6 9 17 4 12"></polyline>
                                             </svg>
                                         </div>
-                                        <span className="text-[#f5f0d9]/90">Methoden zur Traum-Stabilisierung</span>
+                                        <span className="text-[#f5f0d9]/90">Reality Checks für den Alltag einüben</span>
                                     </li>
                                     <li className="flex items-start gap-3">
                                         <div className="mt-1.5 flex h-4 w-4 flex-shrink-0 items-center justify-center rounded-full bg-[#ff8c4d] text-white">
@@ -101,7 +101,7 @@ export default function BookContentSection() {
                                                 <polyline points="20 6 9 17 4 12"></polyline>
                                             </svg>
                                         </div>
-                                        <span className="text-[#f5f0d9]/90">Strategien zur Traumkontrolle</span>
+                                        <span className="text-[#f5f0d9]/90">Traumtagebuch effektiv führen</span>
                                     </li>
                                     <li className="flex items-start gap-3">
                                         <div className="mt-1.5 flex h-4 w-4 flex-shrink-0 items-center justify-center rounded-full bg-[#ff8c4d] text-white">
@@ -120,7 +120,7 @@ export default function BookContentSection() {
                                                 <polyline points="20 6 9 17 4 12"></polyline>
                                             </svg>
                                         </div>
-                                        <span className="text-[#f5f0d9]/90">Traumjournal-Führung</span>
+                                        <span className="text-[#f5f0d9]/90">Klarträume stabilisieren und verlängern</span>
                                     </li>
                                 </ul>
                             </div>
@@ -211,6 +211,38 @@ export default function BookContentSection() {
                         <p className="mt-6 text-base italic text-[#f5f0d9]/80 md:text-lg">
                             "Die Grenzen setzt nur deine Vorstellungskraft."
                         </p>
+
+                        <div className="mt-8 rounded-xl border border-[#e67533]/20 bg-gradient-to-br from-[#2a1a2d]/60 to-[#3d2035]/40 p-5 md:p-6">
+                            <h3 className="mb-4 text-xl font-bold text-[#ff8c4d] md:text-2xl">Für wen ist dieses Buch?</h3>
+                            <div className="grid gap-3 sm:grid-cols-2">
+                                {[
+                                    "Einsteiger ohne Vorkenntnisse im luziden Träumen",
+                                    "Alle, die ihren ersten Klartraum erleben möchten",
+                                    "Menschen, die Albträume bewusst überwinden wollen",
+                                    "Fortgeschrittene, die mehr Kontrolle im Traum suchen",
+                                ].map((item) => (
+                                    <div key={item} className="flex items-start gap-3">
+                                        <div className="mt-1.5 flex h-4 w-4 flex-shrink-0 items-center justify-center rounded-full bg-[#ff8c4d] text-white">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="10"
+                                                height="10"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                strokeWidth="3"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                aria-hidden="true"
+                                            >
+                                                <polyline points="20 6 9 17 4 12"></polyline>
+                                            </svg>
+                                        </div>
+                                        <span className="text-sm text-[#f5f0d9]/90 md:text-base">{item}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

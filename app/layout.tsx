@@ -39,6 +39,7 @@ const bookSchema = {
     inLanguage: "de",
     url: AMAZON_URL,
     genre: "Ratgeber",
+    datePublished: "2024-07-04",
     bookFormat: "https://schema.org/Paperback",
     numberOfPages: "120",
     offers: {
@@ -83,6 +84,54 @@ const bookSchema = {
             reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
             reviewBody:
                 "Das Buch hat mir geholfen, meinen ersten Klartraum zu haben – und das schon nach zwei Wochen! Kann ich nur weiterempfehlen!",
+        },
+        {
+            "@type": "Review",
+            author: { "@type": "Person", name: "Captain Austria" },
+            datePublished: "2024-10-06",
+            reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+            reviewBody:
+                "Es ist sehr gut aufgebaut. In den ersten Kapiteln werden generell Grundlagen über das Träumen und die Schlafphasen erklärt. Dann folgen Schritt für Schritt Anleitungen und Tipps mit Erklärungen wie man einen luziden Traum generieren kann. Ich hatte damit nach einer Woche meinen ersten Klartraum.",
+        },
+        {
+            "@type": "Review",
+            author: { "@type": "Person", name: "Isa" },
+            datePublished: "2024-10-14",
+            reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+            reviewBody:
+                "Ich fand das Buch äusserst nützlich und informativ! Es hat mir mit meinen Klarträumen sehr geholfen. Es ist gut geschrieben und leicht verständlich, aber es beinhaltet trotzdem alle spannenden Infos.",
+        },
+        {
+            "@type": "Review",
+            author: { "@type": "Person", name: "Betty" },
+            datePublished: "2024-07-05",
+            reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+            reviewBody:
+                "Das Buch hat mich so gefesselt, ich habe es direkt durchgelesen. Leicht erklärt, auch für Anfänger geeignet. Spannend und inspirierend, es macht Lust Luzides Träumen zu erlernen.",
+        },
+        {
+            "@type": "Review",
+            author: { "@type": "Person", name: "Li Shihong" },
+            datePublished: "2024-08-15",
+            reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+            reviewBody:
+                "Sehr informativ, sehr wissenschaftlich formuliert und viele Bilder um den Leser zu fesseln. Das beste Buch zum Thema luzides Träumen.",
+        },
+        {
+            "@type": "Review",
+            author: { "@type": "Person", name: "Jannis Schondelmaier" },
+            datePublished: "2024-07-23",
+            reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+            reviewBody:
+                "Ich hatte in der Vergangenheit gelegentlich luzide Träume, doch dieses Buch hat mir geholfen, sie regelmäßig zu erleben. Die Grundlagen werden sehr verständlich erklärt, sodass auch Einsteiger sich schnell das nötige Wissen aneignen können.",
+        },
+        {
+            "@type": "Review",
+            author: { "@type": "Person", name: "Ole von Selle" },
+            datePublished: "2024-07-23",
+            reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+            reviewBody:
+                "Durch dieses Buch habe ich es endlich geschafft luzid zu träumen. Man wird optimal an die Thematik herangeführt.",
         },
     ],
 }
@@ -174,6 +223,28 @@ const faqSchema = {
     ],
 }
 
+const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Merten Dieckmann",
+    url: APP_URL,
+    jobTitle: "Autor",
+    description:
+        "Autor des Buches 'Kontrolliere Deine Träume' über luzides Träumen und Klartraum-Techniken. Software-Entwickler und Klartraum-Praktiker mit mehrjähriger persönlicher Erfahrung.",
+    knowsAbout: [
+        "Luzides Träumen",
+        "Klartraum",
+        "WILD-Technik",
+        "MILD-Technik",
+        "WBTB-Methode",
+        "Traumtagebuch",
+        "Reality Checks",
+        "Schlafphasen",
+        "REM-Schlaf",
+    ],
+    mainEntityOfPage: APP_URL,
+}
+
 export const viewport: Viewport = {
     themeColor: "#f97316",
 }
@@ -181,7 +252,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
     title: "Luzides Träumen & Klartraum lernen – 'Kontrolliere Deine Träume' von Merten Dieckmann",
     description:
-        "⭐⭐⭐⭐⭐ (16 Bewertungen) · Lerne luzides Träumen mit WILD, MILD & WBTB-Techniken. Praxisnaher Ratgeber für Einsteiger – ab 14,95 € auf Amazon. Dein erster Klartraum wartet!",
+        "Lerne luzides Träumen mit WILD, MILD & WBTB-Techniken. Praxisnaher Ratgeber für Einsteiger – ab 14,95 € auf Amazon. Dein erster Klartraum wartet!",
     metadataBase: new URL(APP_URL),
     keywords: [
         "luzides träumen",
@@ -209,7 +280,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: "Luzides Träumen & Klartraum lernen – 'Kontrolliere Deine Träume'",
         description:
-            "Praxisnaher Ratgeber mit WILD, MILD & WBTB-Techniken. ⭐⭐⭐⭐⭐ (16 Bewertungen) · Ab 14,95 € auf Amazon. Dein erster Klartraum wartet!",
+            "Praxisnaher Ratgeber mit WILD, MILD & WBTB-Techniken. Ab 14,95 € auf Amazon. Dein erster Klartraum wartet!",
         url: APP_URL,
         siteName: "Kontrolliere Deine Träume",
         locale: "de_DE",
@@ -219,7 +290,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Luzides Träumen & Klartraum lernen – 'Kontrolliere Deine Träume'",
         description:
-            "Praxisnaher Ratgeber mit WILD, MILD & WBTB-Techniken. ⭐⭐⭐⭐⭐ (16 Bewertungen) · Ab 14,95 € auf Amazon.",
+            "Praxisnaher Ratgeber mit WILD, MILD & WBTB-Techniken. Ab 14,95 € auf Amazon.",
     },
 }
 
@@ -241,6 +312,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
                 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bookSchema) }} />
                 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
             </head>
             <body>
                 <PostHogProvider>

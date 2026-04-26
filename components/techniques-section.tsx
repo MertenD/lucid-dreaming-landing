@@ -42,7 +42,7 @@ const techniques: { name: string; subtitle: string; description: string; icon: L
 
 export default function TechniquesSection() {
     return (
-        <section className="relative overflow-hidden bg-gradient-to-b from-[#182037] to-[#182037] py-16 md:py-24">
+        <section id="techniken" className="relative overflow-hidden bg-gradient-to-b from-[#182037] to-[#182037] py-16 md:py-24">
             <div className="absolute inset-0 overflow-hidden">
                 <div className="absolute right-[5%] top-[15%] h-48 w-48 rounded-full bg-gradient-to-br from-[#e67533] to-[#d56a2d] opacity-5"></div>
                 <div className="absolute left-[3%] bottom-[10%] h-32 w-32 rounded-full bg-gradient-to-br from-[#e67533] to-[#d56a2d] opacity-5"></div>

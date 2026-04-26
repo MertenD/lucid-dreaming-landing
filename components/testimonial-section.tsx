@@ -136,7 +136,7 @@ export default function TestimonialsSection() {
   }, [emblaApi])
 
   return (
-      <section className="relative overflow-hidden bg-gradient-to-b from-[#182037] to-[#2d1e3a] py-12 md:py-16 lg:py-24">
+      <section id="bewertungen" className="relative overflow-hidden bg-gradient-to-b from-[#182037] to-[#2d1e3a] py-12 md:py-16 lg:py-24">
         {/* Subtile Planeteneffekte */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -right-20 top-[10%] h-40 w-40 rounded-full bg-gradient-to-br from-[#e67533] to-[#d56a2d] opacity-10"></div>

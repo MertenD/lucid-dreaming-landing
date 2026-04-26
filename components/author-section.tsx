@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export default function AuthorSection() {
     return (
-        <section className="relative overflow-hidden bg-gradient-to-b from-[#3d2035] to-[#2a1a2d] py-16 md:py-24">
+        <section id="autor" className="relative overflow-hidden bg-gradient-to-b from-[#3d2035] to-[#2a1a2d] py-16 md:py-24">
             <div className="absolute inset-0 opacity-10">
                 <div className="absolute left-[5%] top-[20%] h-32 w-32 rounded-full bg-gradient-to-r from-[#e67533] to-[#ff8c4d]"></div>
                 <div className="absolute right-[10%] top-[60%] h-24 w-24 rounded-full bg-gradient-to-r from-[#e67533] to-[#ff8c4d]"></div>
@@ -13,7 +13,7 @@ export default function AuthorSection() {
 
             <div className="container relative mx-auto px-4">
                 <h2 className="mb-12 text-center text-3xl font-bold text-[#f5f0d9] md:text-4xl lg:text-5xl">
-                    {"Über den Autor"}
+                    Über den Autor
                 </h2>
 
                 <div className="mx-auto grid max-w-5xl grid-cols-1 items-center gap-8 md:grid-cols-2 md:gap-12 lg:gap-16">
@@ -21,7 +21,7 @@ export default function AuthorSection() {
                         <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#e67533]/20 to-[#ff8c4d]/20 p-1 shadow-lg transition-transform duration-500 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(230,117,51,0.3)]">
                             <Image
                                 src="/images/avatar-holding-book.webp"
-                                alt="Merten Dieckmann - Autor von Kontrolliere Deine Traeume"
+                                alt="Merten Dieckmann – Autor von Kontrolliere Deine Träume"
                                 width={400}
                                 height={400}
                                 sizes="(max-width: 768px) 90vw, 400px"
@@ -35,19 +35,19 @@ export default function AuthorSection() {
                         <div>
                             <h3 className="text-2xl font-bold text-[#ff8c4d] md:text-3xl">Merten Dieckmann</h3>
                             <p className="mt-1 text-sm text-[#f5f0d9]/60">
-                                Autor &middot; Software-Entwickler &middot; Luzides-Traeumen-Praktiker
+                                Autor &middot; Software-Entwickler &middot; Luzides-Träumen-Praktiker
                             </p>
                         </div>
 
                         <div className="space-y-4 text-[#f5f0d9]/90">
                             <p>
-                                Merten Dieckmann beschäftigt sich seit Jahren intensiv mit luzidem Träumen - aus eigener Faszination und mit persönlicher Erfahrung. Als Software-Entwickler bringt er einen strukturierten, analytischen Blick auf das Thema, den er im Buch <strong>Kontrolliere Deine Träume</strong> mit praxiserprobten Techniken verbindet.
+                                Merten Dieckmann beschäftigt sich seit Jahren intensiv mit luzidem Träumen – aus eigener Faszination und mit persönlicher Erfahrung. Als Software-Entwickler bringt er einen strukturierten, analytischen Blick auf das Thema, den er im Buch <strong>Kontrolliere Deine Träume</strong> mit praxiserprobten Techniken verbindet.
                             </p>
                             <p>
-                                Sein Ziel: luzides Träumen so zu erklären, wie er es sich selbst am Anfang gewünscht hätte - klar, ohne spirituellen Ballast, mit konkreten Schritt-für-Schritt-Anleitungen für WILD, MILD, WBTB, Reality Checks und Traumtagebuch.
+                                Sein Ziel: luzides Träumen so zu erklären, wie er es sich selbst am Anfang gewünscht hätte – klar, ohne spirituellen Ballast, mit konkreten Schritt-für-Schritt-Anleitungen für WILD, MILD, WBTB, Reality Checks und Traumtagebuch.
                             </p>
                             <p>
-                                Für ihn ist der Klartraum kein mystisches Phänomen, sondern eine erlernbare Fähigkeit - ein alltagstaugliches Werkzeug für jeden, der seine Nächte bewusst gestalten möchte.
+                                Für ihn ist der Klartraum kein mystisches Phänomen, sondern eine erlernbare Fähigkeit – ein alltagstaugliches Werkzeug für jeden, der seine Nächte bewusst gestalten möchte.
                             </p>
                         </div>
                     </div>

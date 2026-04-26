@@ -2,7 +2,7 @@ import BuyButton from "@/components/buy-button"
 
 export default function ConversionSection() {
     return (
-        <section className="relative overflow-hidden bg-gradient-to-b from-[#2a1a2d] to-[#1a1630] py-12 md:py-20">
+        <section id="kaufen" className="relative overflow-hidden bg-gradient-to-b from-[#2a1a2d] to-[#1a1630] py-12 md:py-20">
             {/* Hintergrundeffekte */}
             <div className="absolute inset-0">
                 <div className="absolute left-[10%] top-[30%] h-1 w-1 rounded-full bg-white shadow-[0_0_10px_2px_rgba(255,255,255,0.8)] animate-twinkle"></div>

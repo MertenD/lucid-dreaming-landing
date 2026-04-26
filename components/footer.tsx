@@ -24,9 +24,12 @@ export default function Footer() {
                         </a>
                     </div>
 
-                    {/* Impressum */}
-                    <div className="text-sm">
-                        <Link href="/impressum" className="text-[#f5f0d9]/70 hover:text-[#ff8c4d] transition-colors">
+                    {/* Links */}
+                    <div className="flex items-center gap-4 text-sm">
+                        <Link href="/blog" className="text-[#f5f0d9]/70 transition-colors hover:text-[#ff8c4d]">
+                            Blog
+                        </Link>
+                        <Link href="/impressum" className="text-[#f5f0d9]/70 transition-colors hover:text-[#ff8c4d]">
                             Impressum
                         </Link>
                     </div>

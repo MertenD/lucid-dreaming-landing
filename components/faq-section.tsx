@@ -50,7 +50,7 @@ const faqItems: FaqItem[] = [
 
 export default function FaqSection() {
     return (
-        <section className="relative overflow-hidden bg-gradient-to-b from-[#2d1e3a] to-[#3d2035] py-12 md:py-16 lg:py-24">
+        <section id="faq" className="relative overflow-hidden bg-gradient-to-b from-[#2d1e3a] to-[#3d2035] py-12 md:py-16 lg:py-24">
             {/* Subtile Planeteneffekte */}
             <div className="absolute inset-0 overflow-hidden">
                 <div className="absolute -right-20 top-[10%] h-40 w-40 rounded-full bg-gradient-to-br from-[#e67533] to-[#d56a2d] opacity-10"></div>

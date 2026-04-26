@@ -7,7 +7,7 @@ import HeroBackground from "@/components/hero-background"
 
 export default function HeroSection() {
     return (
-        <section className="relative min-h-[100vh] overflow-hidden md:px-16">
+        <section id="start" className="relative min-h-[100vh] overflow-hidden md:px-16">
             {/* Hintergrundbild: WebP sofort, PNG wird nachgeladen */}
             <div className="absolute inset-0 z-0">
                 <HeroBackground />
