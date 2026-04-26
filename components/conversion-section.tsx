@@ -1,4 +1,5 @@
 import BuyButton from "@/components/buy-button"
+import Image from "next/image"
 
 export default function ConversionSection() {
     return (
@@ -12,34 +13,49 @@ export default function ConversionSection() {
             </div>
 
             <div className="container relative mx-auto px-4">
-                <div className="mx-auto max-w-3xl rounded-xl bg-gradient-to-br from-[#3d2035]/80 to-[#2a1a2d]/80 p-5 text-center shadow-lg backdrop-blur-sm md:p-10">
-                    <h2 className="mb-4 text-xl font-bold text-[#f5f0d9] md:mb-6 md:text-4xl">
-                        Bereit, deine Träume zu kontrollieren?
-                    </h2>
+                <div className="mx-auto max-w-3xl rounded-xl bg-gradient-to-br from-[#3d2035]/80 to-[#2a1a2d]/80 p-5 shadow-lg backdrop-blur-sm md:p-10">
+                    <div className="flex flex-col items-center gap-6 sm:flex-row sm:items-start sm:gap-8">
+                        <Image
+                            src="/images/book-3d.webp"
+                            alt="Kontrolliere Deine Träume – Buchcover"
+                            width={120}
+                            height={168}
+                            className="shrink-0 rounded shadow-md"
+                            priority
+                        />
 
-                    <p className="mb-6 text-base text-[#f5f0d9]/90 md:mb-8 md:text-xl">
-                        Tauche ein in die faszinierende Welt des luziden Träumens.
-                    </p>
+                        <div className="w-full text-center sm:text-left">
+                            <h2 className="mb-4 text-xl font-bold text-[#f5f0d9] md:mb-6 md:text-4xl">
+                                Bereit, deine Träume zu kontrollieren?
+                            </h2>
 
-                    <div className="mb-6 flex flex-col items-center justify-center gap-3 md:mb-8 md:flex-row md:gap-8">
-                        <div className="flex flex-col items-center">
-                            <span className="text-2xl font-bold text-[#ff8c4d] md:text-4xl">14,95€</span>
-                            <span className="text-xs text-[#f5f0d9]/70 md:text-sm">inkl. MwSt.</span>
-                        </div>
+                            <p className="mb-6 text-base text-[#f5f0d9]/90 md:mb-8 md:text-xl">
+                                Tauche ein in die faszinierende Welt des luziden Träumens.
+                            </p>
 
-                        <div className="h-px w-16 bg-[#e67533]/30 md:h-16 md:w-px"></div>
+                            <div className="mb-6 flex flex-col items-center justify-center gap-3 md:mb-8 md:flex-row md:gap-8 sm:justify-start">
+                                <div className="flex flex-col items-center sm:items-start">
+                                    <span className="text-2xl font-bold text-[#ff8c4d] md:text-4xl">14,95€</span>
+                                    <span className="text-xs text-[#f5f0d9]/70 md:text-sm">inkl. MwSt.</span>
+                                </div>
 
-                        <div className="flex flex-col items-center">
-                            <span className="text-lg font-bold text-[#f5f0d9] md:text-2xl">Sofort verfügbar</span>
-                            <span className="text-xs text-[#f5f0d9]/70 md:text-sm">als Softcover & E-Book</span>
+                                <div className="h-px w-16 bg-[#e67533]/30 md:h-16 md:w-px"></div>
+
+                                <div className="flex flex-col items-center sm:items-start">
+                                    <span className="text-lg font-bold text-[#f5f0d9] md:text-2xl">Sofort verfügbar</span>
+                                    <span className="text-xs text-[#f5f0d9]/70 md:text-sm">als Softcover & E-Book</span>
+                                </div>
+                            </div>
+
+                            <div className="flex justify-center sm:justify-start">
+                                <BuyButton
+                                    source="conversion_section"
+                                    size="lg"
+                                    className="animate-pulse-glow px-6 py-3 text-base md:px-10 md:py-6 md:text-xl"
+                                />
+                            </div>
                         </div>
                     </div>
-
-                    <BuyButton
-                        source="conversion_section"
-                        size="lg"
-                        className="animate-pulse-glow px-6 py-3 text-base md:px-10 md:py-6 md:text-xl"
-                    />
                 </div>
             </div>
         </section>

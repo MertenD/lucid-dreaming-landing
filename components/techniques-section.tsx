@@ -1,6 +1,7 @@
 import { Moon, Brain, AlarmClock, Eye, BookOpen } from "lucide-react"
 import BuyButton from "@/components/buy-button"
 import type { LucideIcon } from "lucide-react"
+import Image from "next/image"
 
 const techniques: { name: string; subtitle: string; description: string; icon: LucideIcon }[] = [
     {
@@ -81,6 +82,15 @@ export default function TechniquesSection() {
 
                     {/* CTA-Karte */}
                     <article className="flex flex-col items-center justify-center gap-4 rounded-xl border border-[#e67533]/40 bg-gradient-to-br from-[#3d2035]/80 to-[#2a1a2d]/80 p-5 text-center shadow-sm backdrop-blur-sm md:p-6">
+                        <div className="flex items-center justify-center">
+                            <Image
+                                src="/images/book-3d.webp"
+                                alt="Kontrolliere Deine Träume – Buchcover"
+                                width={90}
+                                height={126}
+                                className="rounded shadow-md"
+                            />
+                        </div>
                         <div>
                             <p className="text-base font-bold text-[#f5f0d9] md:text-lg">Alle Techniken im Buch</p>
                             <p className="mt-1 text-sm text-[#f5f0d9]/70">

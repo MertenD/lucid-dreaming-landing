@@ -43,7 +43,6 @@ export default function HeroSection() {
                             <p className="text-base text-[#f5f0d9]">Von Merten Dieckmann</p>
                             <div className="mt-2 flex items-center justify-center gap-2">
                                 <StarRating rating={5} />
-                                <span className="text-xs text-[#f5f0d9]/80">16 Bewertungen</span>
                             </div>
                         </div>
                     </div>
@@ -70,7 +69,6 @@ export default function HeroSection() {
                                 <p className="text-lg text-[#f5f0d9]">Von Merten Dieckmann</p>
                                 <div className="flex items-center gap-3">
                                     <StarRating rating={5} />
-                                    <span className="text-sm text-[#f5f0d9]/80">16 Bewertungen</span>
                                 </div>
                             </div>
                         </div>
